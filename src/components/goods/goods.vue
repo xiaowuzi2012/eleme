@@ -33,10 +33,12 @@
         </li>
       </ul>
     </div>
+    <shopcart :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice"></shopcart>
   </div>
 </template>
 <script>
   import BScroll from 'better-scroll';
+  import shopcart from 'components/shopcart/shopcart';
   const ERR_OK = 0;
   export default {
     props: {
@@ -75,7 +77,7 @@
             this._calculateHeight();
           });
         }
-    });
+      });
     },
     methods: {
       selectMenu(index, event) {
@@ -107,6 +109,9 @@
           this.listHeight.push(height);
         }
       }
+    },
+    components: {
+      shopcart
     }
   };
 </script>
