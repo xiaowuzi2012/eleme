@@ -128,7 +128,7 @@
       },
       listShow() {
         if (!this.totalCount) {
-          this.fold = true;
+          this.fold = true; // eslint-disable-line
           return false;
         } else {
           let show = !this.fold;
@@ -168,7 +168,6 @@
         }
       },
       dropping(el, done) {
-        console.log(done);
         /* eslint-disable no-unused-vars */
         let rf = el.offsetHeight;
         this.$nextTick(() => {
